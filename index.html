@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>big calculator</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="calc">
+
+            <h2 class="calc__title">Personal Injury Settlement Calculator</h2>
+            <div class="calc__wrap">
+              <ul class="calc__inputs-list">
+                  <li class="calculator__inputs-item calc-item">
+                    <!--text-->
+                      <div class="calc-item__text-content">
+                        <div class="calc-item__wrap">
+                          <span class="calc-item__descr-num">1</span>
+                          <h4 class="calc-item__title">Medical Expenses($)</h4>                       
+                        </div>
+                        <p class="calc-item__descr">The total (current and future) costs of special damages, including medical bills, lost income, property damages, and more</p>                   
+                      </div>
+                    <!--/text-->
+                    <!--input-->
+                      <div class="calc-item__input-box">
+                          <input class="calc-item__input" type="text" placeholder="0" id="medical-expenses">
+                          <div class="calc-item__comment"></div>
+                      </div>
+                    <!--/input-->
+                  </li>
+
+                  <li class="calculator__inputs-item calc-item">
+                    <!--text-->
+                      <div class="calc-item__text-content">
+                        <div class="calc-item__wrap">
+                          <span class="calc-item__descr-num">2</span>
+                          <h4 class="calc-item__title">Property Damages($)</h4>   
+                        </div>
+                        <p class="calc-item__descr">Typically used for damages in car accident cases. For other types of personal injury claims, you can usually leave this value as zero.</p>                      
+                      </div>
+                    <!--/text-->
+                    <!--input-->
+                      <div class="calc-item__input-box">
+                          <input class="calc-item__input" type="text" placeholder="0" id="property-damages">
+                          <div class="calc-item__comment"></div>
+                      </div>
+                    <!--/input-->
+                  </li>
+
+                  <li class="calculator__inputs-item calc-item">
+                    <!--text-->
+                      <div class="calc-item__text-content">
+                        <div class="calc-item__wrap">
+                          <span class="calc-item__descr-num">3</span>
+                          <h4 class="calc-item__title">Lost Income($)</h4>
+                          
+                        </div>
+                        <p class="calc-item__descr">Total sum of a period that you couldn't work due to your injuries</p>                      
+                      </div>
+                    <!--/text-->
+                    <!--input-->
+                      <div class="calc-item__input-box">
+                          <input class="calc-item__input"  type="text" placeholder="0" id="lost-income">
+                          <div class="calc-item__comment"></div>
+                      </div>
+                    <!--/input-->
+                  </li>
+                  
+                  <li class="calculator__inputs-item calc-item">
+                    <!--text-->
+                      <div class="calc-item__text-content">
+                        <div class="calc-item__wrap">
+                          <span class="calc-item__descr-num">4</span>
+                          <h4 class="calc-item__title">Future Medical Expenses($)</h4>                       
+                        </div>
+                        <p class="calc-item__descr">Total cost of anticipated ongoing medical treatment.</p>                      
+                      </div>
+                    <!--/text-->
+                    <!--input-->
+                      <div class="calc-item__input-box">
+                          <input class="calc-item__input"  type="text" placeholder="0" id="future-medical-expenses">
+                          <div class="calc-item__comment"></div>
+                      </div>
+                    <!--/input-->
+                  </li>
+
+                  <li class="calculator__inputs-item calc-item">
+                    <!--text-->
+                      <div class="calc-item__text-content">
+                        <div class="calc-item__wrap">
+                          <span class="calc-item__descr-num">5</span>
+                          <h4 class="calc-item__title">Multiplier ($)</h4>                        
+                        </div>
+                        <p class="calc-item__descr">Estimate the value of your pain and suffering, including stress, anxiety, and physical discomfort.</p>                      
+                      </div>
+                    <!--/text-->
+                    <!--input-->
+                      <div class="calc-item__input-box">
+                          <input class="calc-item__input"  type="text" placeholder="0" id="multiplier">
+                          <div class="calc-item__comment"></div>
+                      </div>
+                    <!--/input-->  
+                  </li>
+              </ul>
+              <button class="calc__button">Calculate</button>
+              <button class="calc__button calc__button-reset">Reset</button>
+            </div>
+            <ul class="calc__inputs-list calc__inputs-list_results">
+                <!-- <li class="calculator__inputs-item calc-item">
+                    <div class="calc-item__text-content">
+                      <div class="calc-item__wrap">
+                        <h4 class="calc-item__title">Economic Damages</h4>                       
+                      </div>
+                      <p class="calc-item__descr">This is the sum of your "special" damages, or economic losses.</p>                   
+                    </div>
+                    <div class="calc-item__input-box">
+                        <input class="calc-item__input" type="text" placeholder="0" id="economic-damages">
+                        <div class="calc-item__comment"></div>
+                    </div>
+                </li>
+                <li class="calculator__inputs-item calc-item">
+                    <div class="calc-item__text-content">
+                      <div class="calc-item__wrap">                        
+                        <h4 class="calc-item__title">Non-Economic Damages (Pain and Suffering)</h4>   
+                      </div>
+                      <p class="calc-item__descr">This is a payment for your general damages (pain and suffering), based on the multiplier you've chosen. We also include a $1,000 "nuisance settlement" value.</p>                      
+                    </div>
+                    <div class="calc-item__input-box">
+                        <input class="calc-item__input" type="text" placeholder="0" id="non-economic-damages">
+                        <div class="calc-item__comment"></div>
+                    </div>
+                </li> -->
+                <li class="calculator__inputs-item calc-item">
+                  <!--text-->
+                    <div class="calc-item__text-content">
+                      <div class="calc-item__wrap">                        
+                        <h4 class="calc-item__title">Your Total Settlement Estimate</h4>                       
+                      </div>                                   
+                    </div>
+                  <!--/text-->
+                  <!--input-->
+                    <div class="calc-item__input-box">
+                        <input class="calc-item__input"  type="text" placeholder="0" id="total">
+                        <div class="calc-item__comment"></div>
+                    </div>
+                  <!--/input-->
+                </li>
+            </ul>
+        
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
